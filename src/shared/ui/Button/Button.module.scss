@@ -1,0 +1,33 @@
+@import "../../../styles/globals.scss";
+
+.btn {
+    border: 1px solid $border-color;
+    font-weight: 600;
+    border-radius: 10px;
+
+    &.form {
+        padding: 8px;
+        margin: 15px;
+        color: $primary-color;
+        background: $border-color;
+    }
+
+    &.page {
+        height: 50px;
+        font-size: 22px;
+        width: 80%;
+        margin: 0 auto;
+        color: $border-color;
+        background: $primary-color;
+    }
+}
+
+.btn:hover {
+    border: 1px solid $active-border-color;
+}
+
+@media (max-width: 560px) {
+    .btn.page {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,16 @@
+.container {
+    width: 100%;  
+    }
+.title {
+    font-size: 48px;
+    color: rgb(34, 34, 34);
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+@media (max-width: 560px) {
+.title{
+    font-size: 28px;
+}
+  }
