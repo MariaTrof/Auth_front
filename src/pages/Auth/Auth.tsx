@@ -1,15 +1,16 @@
-import styles from './Auth.module.scss'
-import { Form } from '../../features/components/Form/Form'
-import type { FC } from 'react'
+import { lazy, Suspense } from "react";
+import styles from "./Auth.module.scss";
 
-export const Auth: FC = () => {
+const LazyForm = lazy(() => import("../../features/Auth/Form"));
+const Auth = () => {
+  return (
+    <div className={styles.container} role="main">
+      <h1 className={styles.title}>Форма Авторизации</h1>
+      <Suspense fallback={<div className={styles.text}>Загрузка формы...</div>}>
+        <LazyForm />
+      </Suspense>
+    </div>
+  );
+};
 
-    return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Форма Авторизации</h1>
-            <Form />
-        </div>
-    )
-}
-
-
+export default Auth;

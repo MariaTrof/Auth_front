@@ -1,21 +1,44 @@
 import { Route, Routes } from "react-router";
+import { ROUTES } from "@shared/config/routes";
 import styles from "./App.module.scss";
-import { Layout } from "../shared/Layout/Layout";
-import { Auth } from "../pages/Auth/Auth";
-import { Main } from "../pages/Main/Main";
-import { Personal } from "../pages/Personal/Personal";
-import { PrivateRoute } from "../features/components/PrivateRoute/PrivateRoute";
+import { Layout } from "@widgets/Layout";
+import type { AppRoute } from "../shared/config/routes.const";
+import { PATHS } from "../shared/config/routes";
+import { AuthRoute } from "../features/Auth/routes/AuthRoute";
+import { PrivateRoute } from "../features/Auth/routes/PrivateRoute";
+
+
 
 function App() {
   return (
     <div className={styles.container}>
       <Layout>
         <Routes>
-          <Route index element={<Main />} path="/" />
-          <Route element={<Auth />} path="/auth" />
-          <Route element={<PrivateRoute />}>
-            <Route element={<Personal />} path="/personal" />
-          </Route>
+          {ROUTES.map((route: AppRoute) => {
+            if (route.path === PATHS.AUTH) {
+              return (
+                <Route key={route.path} element={<AuthRoute />}>
+                  <Route path={route.path} element={route.element} />
+                </Route>
+              );
+            }
+
+            if (route.isPrivate) {
+              return (
+                <Route key={route.path} element={<PrivateRoute />}>
+                  <Route path={route.path} element={route.element} />
+                </Route>
+              );
+            }
+
+            return (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={route.element}
+              />
+            );
+          })}
         </Routes>
       </Layout>
     </div>
@@ -23,3 +46,5 @@ function App() {
 }
 
 export default App;
+
+//тут алиасы работают на половину, а в остальных файлах нет

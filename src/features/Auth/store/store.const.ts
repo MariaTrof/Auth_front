@@ -1,4 +1,4 @@
-import type { User } from "../../server/AuthServerice.const";
+import type { User } from "../../../entities/User";
 
 export interface AuthStoreProps {
   isAuth: boolean;

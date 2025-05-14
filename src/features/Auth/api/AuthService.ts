@@ -1,4 +1,5 @@
-import { type AuthResponse, type User } from "./AuthServerice.const";
+import type { User } from "../../../entities/User";
+import { type AuthResponse } from "./AuthServerice.const";
 
 export const ServiceLogin = async (credentials: {
   username: string;

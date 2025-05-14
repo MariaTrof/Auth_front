@@ -1,16 +1,16 @@
-import { useState, useEffect, type FC, type ChangeEvent } from "react";
+import { useState, useEffect, type ChangeEvent } from "react";
 import styles from "./Input.module.scss";
 import { InputTheme, type InputProps } from "./Input.const";
 import classNames from "classnames";
 
-export const Input: FC<InputProps> = ({
+export const Input = ({
   className,
   theme = InputTheme.BLANK,
   placeholder,
   type,
   value: propValue = "",
   ...props
-}) => {
+}: InputProps) => {
   const [value, setValue] = useState(propValue);
   const [hasText, setHasText] = useState(false);
 

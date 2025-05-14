@@ -2,12 +2,12 @@
   "compilerOptions": {
     // "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",
+    "composite": true,
+    // "outDir": "./dist",
+    // "emitDeclarationOnly": false, // Разрешить генерацию JS
+    // "noEmit": false,
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     /* Bundler mode */
@@ -22,10 +22,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     // "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true
     // "noUncheckedSideEffectImports": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "src/utils/types.d.ts"]
 }

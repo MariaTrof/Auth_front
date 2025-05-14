@@ -1,9 +1,10 @@
+@import "../../styles/globals.scss";
 .container {
     width: 100%;  
     }
 .title {
     font-size: 48px;
-    color: rgb(34, 34, 34);
+    color: $text-color;
     font-style: italic;
     margin-bottom: 20px;
     font-weight: 300;
