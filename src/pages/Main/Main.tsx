@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./Main.module.scss";
-import { Button } from "../../shared/ui/Button";
-import { ButtonTheme } from "../../shared/ui/Button/Button.const";
-import { useAuthStore } from "../../features/Auth/store";
-import { useAuth } from "../../features/Auth/hooks/useAuth";
-import { PATHS } from "../../shared/config/routes";
+import { Button } from "@shared/ui/Button";
+import { ButtonTheme } from "@shared/ui/Button/Button.const";
+import { useAuthStore } from "@features/Auth/store";
+import { useAuth } from "@features/Auth/hooks/useAuth";
+import { PATHS } from "@shared/config/routes";
 
 const Main = () => {
   const { isAuth, logout } = useAuthStore();

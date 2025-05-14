@@ -17,10 +17,6 @@ export default defineConfig({
       "@utils": path.resolve(__dirname, "src/utils"),
       "@widgets": path.resolve(__dirname, "src/widgets"),
     }
-  },
-  //  "include": ["src/**/*.ts", "src/**/*.tsx"], // Убедитесь, что пути включены
-  // "exclude": ["node_modules"]
+  }
 });
 
-// У меня не сработало добавление алиасов через конфиг, 
-// но я все равно оставила код, потому что я не знаю, в чем ошибка

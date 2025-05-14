@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Personal.module.scss";
-import { useAuth } from "../../features/Auth/hooks/useAuth";
-import { PATHS } from "../../shared/config/routes";
+import { useAuth } from "@features/Auth/hooks/useAuth";
+import { PATHS } from "@shared/config/routes";
 
 const Personal = () => {
   const { username } = useAuth();

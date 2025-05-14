@@ -6,11 +6,11 @@ import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { schema, type Schema } from "./Schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { InputTheme } from "../../../shared/ui/Input/Input.const";
-import { Input } from "../../../shared/ui/Input";
-import { Button } from "../../../shared/ui/Button";
-import { ButtonTheme } from "../../../shared/ui/Button/Button.const";
-import { PATHS } from "../../../shared/config/routes";
+import { InputTheme } from "@shared/ui/Input/Input.const";
+import { Input } from "@shared/ui/Input";
+import { Button } from "@shared/ui/Button";
+import { ButtonTheme } from "@shared/ui/Button/Button.const";
+import { PATHS } from "@shared/config/routes";
 
 const Form = () => {
   const navigate = useNavigate();

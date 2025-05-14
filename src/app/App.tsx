@@ -2,10 +2,10 @@ import { Route, Routes } from "react-router";
 import { ROUTES } from "@shared/config/routes";
 import styles from "./App.module.scss";
 import { Layout } from "@widgets/Layout";
-import type { AppRoute } from "../shared/config/routes.const";
-import { PATHS } from "../shared/config/routes";
-import { AuthRoute } from "../features/Auth/routes/AuthRoute";
-import { PrivateRoute } from "../features/Auth/routes/PrivateRoute";
+import type { AppRoute } from "@shared/config/routes.const";
+import { PATHS } from "@shared/config/routes";
+import { AuthRoute } from "@features/Auth/routes/AuthRoute";
+import { PrivateRoute } from "@features/Auth/routes/PrivateRoute";
 
 
 
